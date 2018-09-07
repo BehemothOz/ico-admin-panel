@@ -1,0 +1,80 @@
+.panel-settings {
+    .settings-body {
+        padding: 10px 18px;
+
+        .btn {
+            font-size: 15px;
+        }
+    }
+
+    .set-line {
+        padding: 20px 0;
+        border-bottom: 1px solid #e3e4e8;
+        @include cf();
+
+        &:first-of-type {
+            .set-value {
+                padding-right: 130px;
+            }
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        .set-name,
+        .set-value {
+            float: left;
+            font-size: 15px;
+            color: #0e1824;
+        }
+
+        .set-name {
+            width: 150px;
+            padding-right: 20px;
+        }
+
+        .set-value {
+            position: relative;
+            width: calc(100% - 150px);
+
+            .btn-change-pass {
+                position: absolute;
+                top: -7px;
+                right: 0;
+                height: 30px;
+                padding-top: 0;
+                padding-bottom: 0;
+                font-size: 15px;
+                line-height: 30px;
+            }
+        }
+
+        // password
+        .new-pass-list {
+            // dp: none;
+        }
+
+        .passline {
+            margin-bottom: 12px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .set-name {
+                min-height: 1px;
+                line-height: 45px;
+            }
+
+            .set-input {
+                width: 246px;
+            }
+
+            .link-cancel {
+                margin-left: 40px;
+                font-size: 15px;
+            }
+        }
+    }
+}

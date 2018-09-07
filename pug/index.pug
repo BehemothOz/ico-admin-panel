@@ -1,0 +1,179 @@
+extends layout/layout.pug
+
+block content
+
+    div.content-block
+        // Content
+        div.content.content-md
+
+            // Center content
+            div.content.content-center
+
+                // Invest panel
+                section.panel.panel-invest
+                    h2.panel-title Инвестировать
+                    div.panel-body
+
+                        div.invest-action
+                            // Zeroline
+                            div.invest-line
+                                div.col-desc Адрес BANER Waves
+                                    div.tooltip.tooltip-waves
+                                        div.tooltip-call.gray
+                                        div.tooltip-content
+                                           | Это Waves адрес компании BANER выделенный персонально для вас. Именно его нужно использовать для покупки токенов. Другими словами, именно на него вы отправляете свои денежные средства из личного кабинета <a href="https://waveswallet.io/" target="_blank" class="link">https://waveswallet.io/</a>.
+                                div.col-action
+                                    div.waves-views 3N9iRMou3pgmyPbFZn5QZQvBTQBkL2fR6R1
+
+                            // Oneline
+                            div.invest-line.indent
+                                div.col-desc Валюта
+                                div.col-action
+                                    div.dropdown-block
+                                        div.invest-field.select-currency(data-toggle="dropdown")
+                                            div.currency USD
+                                            span.arrow
+                                        ul(data-toggle="dropdown-menu").dropdown-menu.drop-menu-currency
+                                            li.drop-item.curr-item USD
+                                            li.drop-item.curr-item EURO
+                                            li.drop-item.curr-item BTC
+                                            li.drop-item.curr-item WAVES
+                                            li.drop-item.curr-item ETH
+
+                            // Twoline
+                            div.invest-line.indent
+                                div.col-desc Сумма
+                                div.col-action
+                                    div.input-amount-wrap
+                                        input(class="invest-field input-amount" type="text" value="0" placeholder="Сумма")
+                                        div.action-amount
+                                            span.plus +
+                                            span.minus -
+
+                            // Threeline
+                            div.invest-line.indent
+                                div.col-desc
+                                div.col-action
+                                    button(data-name="invest").btn.btn-block.blue.open-popup Инвестировать
+
+                            // Fourline
+                            div.invest-line
+                                div.col-desc
+                                div.col-action
+                                    // Result
+                                    div.invest-result
+                                        ul.result-list
+                                            li.result-item Количество (BNR): 0 BNR
+                                            li.result-item Бонус (BNR): 0 BNR
+                                            li.result-item ВЫ ПОЛУЧИТЕ (BNR): 0 BNR
+
+            // Right aside
+            include includes/aside-right.pug
+
+        // Content
+        div.content.content-md
+
+            // Invested panel
+            section.panel.panel-invested
+                h2.panel-title Инвестировано
+                div.panel-body
+                    ul.currency-list
+                        li.currency-item.usd
+                            i.icon
+                            div.amount 0
+                            div.currency USD
+                        li.currency-item.euro
+                            i.icon
+                            div.amount 0
+                            div.currency EURO
+                        li.currency-item.btc
+                            i.icon
+                            div.amount 0
+                            div.currency BTC
+                        li.currency-item.waves
+                            i.icon
+                            div.amount 0
+                            div.currency WAVES
+                        li.currency-item.eth
+                            i.icon
+                            div.amount 0
+                            div.currency ETH
+
+            // Bonus panel
+            section.panel.panel-bonus
+                h2.panel-title Бонусы
+                div.panel-body
+                    div.bonus-item
+                        div.percent 25%
+                        div.empty-scale
+                            div.part-scale.full-scale
+                        div.time День 1-2
+                    div.bonus-item
+                        div.percent 20%
+                        div.empty-scale
+                            div.part-scale.full-scale
+                        div.time День 3-5
+                    div.bonus-item
+                        div.percent 15%
+                        div.empty-scale
+                            div.part-scale.full-scale
+                        div.time День 6-8
+
+                    div.bonus-item
+                        div.percent 10%
+                        div.empty-scale
+                            div.part-scale.part-scale-20
+                        div.time День 9-12
+                    div.bonus-item
+                        div.percent 5%
+                        div.empty-scale
+                            //- div.full-scale
+                        div.time День 13-17
+                    div.bonus-item
+                        div.percent 0%
+                        div.empty-scale
+                            //- div.full-scale
+                        div.time День 18-25
+
+            // Course panel
+            section.panel.panel-course
+                h2.panel-title Курс обмена
+                div.panel-body
+                    div.course-tip BNR цена
+                    div.panel-course-wrap
+                        ul.course-list
+                            li.course-item
+                                span.icon
+                                span.currency USD
+                                span.amount 0
+                            li.course-item
+                                span.icon
+                                span.currency EURO
+                                span.amount 0
+
+                        ul.course-list
+                            li.course-item
+                                span.icon
+                                span.currency BTC
+                                span.amount 0
+                            li.course-item
+                                span.icon
+                                span.currency WAVES
+                                span.amount 0
+
+                        ul.course-list
+                            li.course-item
+                                span.icon
+                                span.currency ETH
+                                span.amount 0
+
+        // Footer
+        div.content.content-md
+            include includes/footer.pug
+
+
+block popup
+    // Popups
+    include includes/popup-waves.pug
+    include includes/popup-invest.pug
+

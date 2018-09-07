@@ -1,0 +1,143 @@
+.aside-right {
+    .panel-mini {
+        background-color: $white;
+
+        // Statistics
+        &.statistics {
+            .line {
+                position: relative;
+                line-height: 19px;
+                color: rgba(14, 24, 36, 0.5);
+
+                span {
+                    margin-left: 5px;
+                    font-weight: bold;
+                    color: $black-0;
+                }
+
+                .tip-bonus {
+                    position: relative;
+                    top: 1px;
+                    display: inline-block;
+                    vertical-align: baseline;
+                    width: 12px;
+                    height: 12px;
+                    background: url('../img/icons/tip.svg') no-repeat center;
+                    cursor: pointer;
+                }
+
+                .tip-bonus-desc {
+                    position: absolute;
+                    right: 108px;
+                    top: -89px;
+                    width: 360px;
+                    padding: 18px;
+
+                    font-size: 15px;
+                    line-height: 1.53;
+                    color: $white;
+                    border-radius: 2px;
+                    background-color: #1c252a;
+
+                    visibility: hidden;
+                    opacity: 0;
+                    pointer-events: none;
+                    z-index: 800;
+                    transition: opacity 100ms linear,
+                                right 100ms linear,
+                                visibility 100ms linear;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: -18px;
+                        top: 50%;
+                        height: 0;
+                        width: 0;
+                        margin-top: -5px;
+                        pointer-events: none;
+                        border: solid transparent;
+                        border-width: 9px;
+                        border-left-color: #1c252a;
+                    }
+
+                    &.show {
+                        visibility: visible;
+                        opacity: 1;
+                        right: 98px;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .panel-status {
+        .panel-title {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .status-body {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 25px;
+
+            .title {
+                padding: 22px 0;
+                font-size: 12px;
+                line-height: 1.42;
+                letter-spacing: 0.4px;
+                color: $gray_94;
+            }
+
+            .currency-item,
+            .count {
+                display: block;
+                margin-bottom: 24px;
+                padding-left: 30px;
+                font-size: 17px;
+                font-weight: bold;
+                background-repeat: no-repeat;
+                background-position: left center;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .invested-all {
+                margin-bottom: 10px;
+
+                .bnr {
+                    background-image: url('../img/icons/btc.svg');
+                }
+
+                .usd {
+                    background-image: url('../img/icons/usd.png');
+                    background-position-x: 2px;
+                }
+
+                // .euro {
+                //     background-image: url('../img/icons-invested/ic-5.svg');
+                // }
+
+                // .waves {
+                //     background-image: url('../img/icons-invested/ic-7.png');
+                // }
+
+                // .eth {
+                //     background-image: url('../img/icons-invested/ic-3.svg');
+                //     background-position-x: 2px;
+                // }
+            }
+
+            .members {
+                .count {
+                    margin-bottom: 0;
+                    background-image: url('../img/icons/user.svg');
+                }
+            }
+        }
+    }
+}

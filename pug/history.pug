@@ -1,0 +1,37 @@
+extends layout/layout.pug
+
+block content
+    // Content
+    div.content-block
+        div.content.content-lg
+            section.panel.panel-history
+                h2.panel-title История транзакций
+                div.panel-body.history-table
+
+                    div.history-row.history-row-head
+                        div.history-cell Дата
+                        div.history-cell Описание
+                        div.history-cell Статус
+                        div.history-cell Сумма
+
+                    div.history-row
+                        div.history-cell.cell-date 12 Jun 16:52
+                        div.history-cell.cell-desc Converting 0.000000 BTC to 2.438626 PLBT
+                        div.history-cell.cell-status.recelved Recelved
+                        div.history-cell.cell-amount +2.43862624386268626 PL…
+
+                    div.history-row
+                        div.history-cell.cell-date 12 Jun 16:52
+                        div.history-cell.cell-desc Converting 0.000000 BTC to 2.438626 PLBTConverting 0.000000 BTC
+                        div.history-cell.cell-status.expired Expired
+                        div.history-cell.cell-amount +1.15 PLBT
+
+                    div.history-row
+                        div.history-cell.cell-date 12 Jun 16:52
+                        div.history-cell.cell-desc Converting 0.000000 BTC to 2.438626 PLBT
+                        div.history-cell.cell-status.copleted Copleted
+                        div.history-cell.cell-amount +1.15 PLBT
+
+        div.content.content-lg
+            // Footer
+            include includes/footer.pug

@@ -1,0 +1,29 @@
+.panel {
+    margin-bottom: 20px;
+    background-color: $white;
+    border: solid 1px #e3e4e8;
+    border-radius: 4px;
+
+    .panel-title {
+        padding: 15px 30px;
+        font-size: 17px;
+        font-weight: 400;
+        color: $black-0;
+        border-bottom: solid 1px #e3e4e8;
+    }
+
+    .panel-body {
+        padding: 0 30px;
+        @include cf();
+    }
+}
+
+.panel-mini {
+    height: 58px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 13px;
+    color: $black;
+    border-radius: 4px;
+    // background-color: $gray_a9;
+}

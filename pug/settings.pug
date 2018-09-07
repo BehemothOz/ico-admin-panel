@@ -1,0 +1,24 @@
+extends layout/layout.pug
+
+block content
+    // Content
+    div.content-block
+        div.content.content-center
+            section.panel.panel-settings
+                h2.panel-title Настройки
+                div.panel-body.settings-body
+                    div.set-line
+                        div.set-name Пароль
+                        div.set-value ****
+                            a(href="settings-password.html").btn-change-pass.btn.blue Изменить
+                    div.set-line
+                        div.set-name Email
+                        div.set-value admain@baner.com
+                    div.set-line
+                        div.set-name Номер телефона
+                        div.set-value +7 (812) 111 22 33
+
+
+        div.content.content-md
+            // Footer
+            include includes/footer.pug

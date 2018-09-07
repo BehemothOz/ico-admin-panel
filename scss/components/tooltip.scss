@@ -1,0 +1,125 @@
+.tooltip {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 5px;
+
+    .tooltip-call {
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &.black {
+            background-image: url('../img/icons/tip.svg');
+        }
+
+        &.gray {
+            background-image: url('../img/icons/tip-gray.svg');
+        }
+
+        &.white {
+            background-image: url('../img/icons/tip-white.svg');
+        }
+    }
+
+    .tooltip-content {
+        position: absolute;
+        width: 360px;
+        padding: 18px;
+
+        font-size: 15px;
+        line-height: 1.53;
+        color: $white;
+        border-radius: 2px;
+        background-color: #1c252a;
+
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 800;
+        transition: opacity 100ms linear,
+                    right 100ms linear,
+                    top 100ms linear,
+                    visibility 100ms linear;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            height: 0;
+            width: 0;
+            margin-top: -5px;
+            pointer-events: none;
+            border: solid transparent;
+            border-width: 9px;
+            border-left-color: #1c252a;
+        }
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &.tooltip-bonus {
+        .tooltip-content {
+            top: 50%;
+            right: 37px;
+            transform: translateY(-52%);
+
+            &.show {
+                right: 27px;
+            }
+        }
+    }
+
+    &.tooltip-waves {
+        margin-left: 0;
+
+        .tooltip-content {
+            top: 50%;
+            right: 37px;
+            transform: translateY(-52%);
+            text-align: left;
+
+            &.show {
+                right: 27px;
+            }
+        }
+    }
+
+    &.tooltip-waves-header {
+        top: 2px;
+
+        .tooltip-content {
+            top: 35px;
+            left: 50%;
+            transform: translateX(-51%);
+            text-align: left;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: -13px;
+                height: 0;
+                width: 0;
+                margin-left: -5px;
+                pointer-events: none;
+                border: solid rgba(0, 0, 0, 0);
+                border-width: 9px;
+                border-bottom-color: #1c252a;
+            }
+
+            &.show {
+                top: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+extends layout/layout-minimal.pug
+
+block register
+    // Register panel
+    section.panel.panel-form
+        h2.panel-title Подтверждение
+            div.dropdown-block.dropdown-lang
+                a(data-toggle="dropdown" href="").select-lang Russian
+                ul(data-toggle="dropdown-menu").dropdown-menu.dropdown-menu-lang
+                    li.drop-item Russian
+                    li.drop-item English
+                    li.drop-item China
+
+        div.panel-body.panel-form-body
+            div.register-confirm
+                img(class="icon" src="img/success.svg")
+                div.title Почти готово!
+                p.desc Пожалуйста, проверьте входящие в вашем почтовом ящике, чтобы завершить регистрацию

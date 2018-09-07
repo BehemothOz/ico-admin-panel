@@ -1,0 +1,74 @@
+.alert-waves {
+    position: relative;
+    padding: 25px 0;
+    background-color: #4f585d;
+    z-index: 1500;
+
+    .waves-address-wrap {
+        position: relative;
+        float: left;
+        font-size: 15px;
+
+        .waves-desc {
+            margin-right: 15px;
+            color: $white;
+        }
+
+        .waves-input {
+            width: 450px;
+            height: 45px;
+        }
+
+        .waves-btn {
+            margin-left: 10px;
+            font-size: 15px;
+            color: $white;
+            border: solid 1px $white;
+
+            &:hover {
+                color: #4f585d;
+                background-color: $white;
+            }
+        }
+
+        .waves-tip {
+            position: absolute;
+            left: 107px;
+            top: 60px;
+            right: 0;
+            padding: 10px;
+            font-size: 15px;
+            line-height: 1.53;
+            color: $white;
+            border-radius: 2px;
+            background-color: #1c252a;
+
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            // z-index: 800;
+            transition: opacity 100ms linear,
+                        right 100ms linear,
+                        visibility 100ms linear;
+
+            &.show {
+                visibility: visible;
+                opacity: 1;
+                top: 50px;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    .waves-about {
+        float: right;
+        padding: 12px 0;
+    }
+
+    .open-popup {
+        font-size: 15px;
+        color: #76b5ff;
+        border-bottom: 1px dashed #76b5ff;
+    }
+
+}

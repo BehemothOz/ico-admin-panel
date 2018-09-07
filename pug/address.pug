@@ -1,0 +1,28 @@
+extends layout/layout.pug
+
+block content
+    // Сontent
+    div.content-block
+        div.content.content-md
+            div.content.content-center
+                section.panel.panel-address
+                    h2.panel-title Адрес аккаунта
+                    div.panel-body.address-body
+
+                        div.tip-title АДРЕС КОШЕЛЬКА
+
+                        p.warrning-msg Не отправляйте ETH на этот адрес до окончания ICO. Инструменты для инвестирования доступны на вкладке "Панель управления".
+
+                        p.appear-msg Your address will appear here after the ICO
+
+                        button.btn.white Скопировать
+
+                        div.msg-reserve Хотите сделать резервную копию кошелька ?
+
+            // Right aside
+            include includes/aside-right.pug
+
+
+        // Footer
+        div.content.content-md
+            include includes/footer.pug

@@ -1,0 +1,81 @@
+.panel-history {
+
+    .history-start {
+        padding: 125px 0;
+        text-align: center;
+
+        .desc {
+            margin-bottom: 15px;
+            font-size: 17px;
+            color: rgba($blue_35, 0.6);
+        }
+    }
+
+    .history-table {
+        display: table;
+        padding-top: 34px;
+        padding-bottom: 34px;
+
+        .history-row {
+            display: table-row;
+
+            &.history-row-head {
+                background-color: $gray_e3;
+
+                .history-cell {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $blue_35;
+                    border: 1px solid $gray_d4;
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: 1px solid $gray_d4;
+                    }
+                }
+            }
+
+            .history-cell {
+                $recelved: rgba($blue_35, 0.5);
+                $expired: $blue_35;
+                $copleted: #159f84;
+
+                display: table-cell;
+                padding: 13px 18px;
+                font-size: 13px;
+                color: $blue_35;
+                border-bottom: 1px solid $gray_d4;
+
+                &.cell-date {
+                    width: 120px;
+                    color: rgba($blue_35, 0.5);
+                }
+
+                &.cell-desc {
+                    width: 441px;
+                }
+
+                &.cell-status {
+                    width: 110px;
+
+                    &.recelved {
+                        color: $recelved;
+                    }
+
+                    &.copleted {
+                        font-weight: bold;
+                        color: $copleted;
+                    }
+
+                    &.expired {
+                        color: $expired;
+                    }
+                }
+
+                &.cell-amount {
+                    width: 224px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.main-nav {
+    .nav-list {
+        border-left: 2px solid rgba($gray_97, 0.28);
+    }
+
+    .nav-item {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            height: 100%;
+            background-color: transparent;
+        }
+
+        &:hover,
+        &.active {
+            &::before {
+                background-color: $blue_0c;
+            }
+
+            .nav-link {
+                color: $blue_0c;
+            }
+        }
+    }
+
+    .nav-link {
+        display: block;
+        padding: 5px 0 5px 18px;
+        font-size: 15px;
+        line-height: 33px;
+        color: $gray_84;
+    }
+}

@@ -1,0 +1,47 @@
+extends layout/layout-minimal.pug
+
+block register
+    // Register panel
+    section.panel.panel-form
+        h2.panel-title Вход
+            div.dropdown-block.dropdown-lang
+                a(data-toggle="dropdown" href="").select-lang Russian
+                ul(data-toggle="dropdown-menu").dropdown-menu.dropdown-menu-lang
+                    li.drop-item Russian
+                    li.drop-item English
+                    li.drop-item China
+
+        div.panel-body.panel-form-body
+            form
+                div.form-line
+                    label(class="label" for="first_name") First Name
+                    input(type="text" class="input" name="first_name" id="first_name" placeholder="First name" value="")
+
+                div.form-line
+                    label(class="label" for="last_name") Last Name
+                    input(type="text" class="input" name="last_name" id="last_name" placeholder="Last Name" value="")
+
+                div.form-line
+                    label(class="label" for="email") Email
+                    input(type="text" class="input" name="email" id="email" placeholder="Email" value="")
+
+                div.form-line
+                    label(class="label" for="password") Password
+                    input(type="password" class="input" name="password" id="password" placeholder="Password" value="")
+
+                div.form-line
+                    label(class="label" for="password_repeat") Repeat password
+                    input(type="password" class="input" name="password_repeat" id="password_repeat" placeholder="Password repeat" value="")
+
+                div.form-line
+                    input(type="checkbox" id="agreement" name="agreement" value="false")
+                    label(class="check-label" for="agreement") I have read and agree with
+                        a(class="" href="" target="_blank")
+                        | Terms and Conditions and confirm that &nbsp;
+                        a(class="" href="" target="_blank")
+                        |I'm NOT the US citizen
+
+                button(class="btn btn-block btn-form blue" type="submit") Зарегистрироваться
+
+                div.tip-sign-in Already have an account? 
+                    a(class="link" href="login.html") Sign in

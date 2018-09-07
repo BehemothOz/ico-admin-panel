@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        include ../includes/head.pug
+
+    body
+        // alert-waves
+        include ../includes/alert-waves.pug
+
+        include ../includes/header.pug
+
+        // Main
+        section.main-content
+            div.container
+
+                // Left aside
+                include ../includes/aside-left.pug
+
+                block content
+
+        block popup
+
+        // Overlay waves
+        //- div.overlay.waves-overlay
+
+        // Scripts
+        block scripts
+            script(src="js/libs/jquery.min.js")
+            script(src="js/wave-auth.js")
+            script(src="js/main.js")
+            script(src="js/calculator.js")
+            script(src="js/popup.js")

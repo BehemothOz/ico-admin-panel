@@ -1,0 +1,58 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+.dropdown-block {
+    position: relative;
+
+    .dropdown-menu {
+        position: absolute;
+        padding: 15px 0;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        background-color: $white;
+        border-radius: 2px;
+        box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
+        transition: opacity 100ms linear, top 100ms linear, visibility 100ms linear;
+        z-index: 800;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .drop-item {
+            padding: 12px 25px;
+            font-size: 14px;
+            color: #0e1824;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #edeef0;
+            }
+        }
+    }
+
+    // drop-menu-currency
+    .drop-menu-currency {
+        width: 220px;
+        top: -45px;
+    }
+
+    // dropdown menu user
+    .dropdown-menu-user {
+        width: 192px;
+        top: 25px;
+        right: 0;
+    }
+
+    // dropdown menu lang
+    .dropdown-menu-lang {
+        width: 192px;
+        top: -15px;
+    }
+}

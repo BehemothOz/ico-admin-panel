@@ -1,0 +1,20 @@
+.main-footer {
+    padding-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $gray_97;
+
+    .copyright {
+        margin-bottom: 5px;
+    }
+
+    .payment-list {
+        padding-top: 15px;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+    }
+}

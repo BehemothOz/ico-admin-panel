@@ -1,0 +1,19 @@
+extends layout/layout.pug
+
+block content
+    // Content
+    div.content-block
+        div.content.content-lg
+            section.panel.panel-history
+                h2.panel-title История транзакций
+                div.panel-body.history-start
+                    div.desc Тут будут показываться<br>ваши транзакции
+                    button(data-name="invest").btn.blue.open-popup Провести первую транзакцию
+
+        div.content.content-lg
+            // Footer
+            include includes/footer.pug
+
+block popup
+    // Popups
+    include includes/popup-invest.pug

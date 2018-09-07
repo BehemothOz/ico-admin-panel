@@ -1,0 +1,18 @@
+.aside-left {
+    .panel-mini {
+        background-color: #d7d9dd;
+
+        // Total balance
+        &.total-balance {
+            .title {
+                margin-bottom: 5px;
+            }
+
+            .num-balance {
+                font-size: 18px;
+                font-weight: bold;
+                color: $black;
+            }
+        }
+    }
+}

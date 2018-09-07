@@ -1,0 +1,47 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    @include cf();
+}
+
+.main-content {
+    padding-top: 20px;
+    @include cf();
+}
+
+.aside-left {
+    float: left;
+    width: 195px;
+    margin-right: 10px;
+}
+
+.aside-right {
+    float: left;
+    width: 230px;
+    margin-left: 10px;
+}
+
+.content-block {
+    float: left;
+    width: 955px;
+    margin-left: 10px;
+}
+
+.content {
+    float: left;
+    @include cf();
+
+    &.content-center {
+        width: 550px;
+        margin-right: 10px;
+    }
+
+    &.content-md {
+        width: 550px + 250px;
+    }
+
+    &.content-lg {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,44 @@
+
+// ================
+// Глобальные стили
+// ================
+
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/normalize';
+@import 'global/fonts';
+@import 'global/grid';
+@import 'global/global';
+
+// ==========
+// Компоненты
+// ==========
+
+@import 'components/dropdowns.scss';
+@import 'components/panels.scss';
+@import 'components/buttons.scss';
+@import 'components/forms.scss';
+@import 'components/panel-form.scss';
+@import 'components/popup.scss';
+@import 'components/alert-waves.scss';
+@import 'components/tooltip.scss';
+
+// =======================
+// Модульные блоки страниц
+// =======================
+
+@import 'page-blocks/header.scss';
+@import 'page-blocks/nav.scss';
+@import 'page-blocks/aside-left.scss';
+@import 'page-blocks/aside-right.scss';
+@import 'page-blocks/footer.scss';
+
+// ==================
+// Отдельные страницы
+// ==================
+
+@import 'pages/main.scss';
+@import 'pages/history.scss';
+@import 'pages/address.scss';
+@import 'pages/sending.scss';
+@import 'pages/settings.scss';
